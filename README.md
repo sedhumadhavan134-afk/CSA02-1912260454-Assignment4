@@ -5,31 +5,32 @@
 **Institution:** Saveetha Institute of Medical and Technical Sciences (SIMATS), Chennai
 
 ## Compiler
-Use GCC with warnings enabled. Record the installed version using: `gcc --version`.
+Use GCC with warnings enabled. Record your actual version using `gcc --version`.
 
-## Build commands
-- Task 1: `gcc -std=c11 -Wall -Wextra -pedantic Task01/main.c -o Task01/task01`
-- Task 2: `gcc -std=c11 -Wall -Wextra -pedantic Task02/main.c -o Task02/task02`
-- Task 3: `gcc -std=c11 -Wall -Wextra -pedantic Task03/main.c -o Task03/task03`
-- Task 4: `gcc -std=c11 -Wall -Wextra -pedantic Task04/main.c -o Task04/task04`
-- Task 5: `gcc -std=c11 -Wall -Wextra -pedantic Task05/main.c Task05/token_counter.c -o Task05/task05`
-- Task 6: `gcc -std=c11 -Wall -Wextra -pedantic Task06/main.c -o Task06/task06`
+## Build and run
+- Task 1: `gcc -std=c11 -Wall -Wextra -pedantic Task01/main.c -o Task01/task01` then `./Task01/task01`.
+- Task 2: `gcc -std=c11 -Wall -Wextra -pedantic Task02/complete_code.c -o Task02/task02` then `./Task02/task02`.
+- Task 3: `gcc -std=c11 -Wall -Wextra -pedantic Task03/complete_code.c -o Task03/task03` then `./Task03/task03`.
+- Task 4: `gcc -std=c11 -Wall -Wextra -pedantic Task04/main.c -o Task04/task04` then `./Task04/task04`.
+- Task 5 (static + automatic + register): `gcc -std=c11 -Wall -Wextra -pedantic Task05/main.c -o Task05/task05` then `./Task05/task05`.
+- Task 5 (extern across files): `gcc -std=c11 -Wall -Wextra -pedantic Task05/extern_demo.c Task05/token_counter.c -o Task05/extern_demo` then `./Task05/extern_demo`.
+- Task 6: `gcc -std=c11 -Wall -Wextra -pedantic Task06/main.c -o Task06/task06` then `./Task06/task06`.
 
-Run each executable from the repository root, for example `./Task01/task01` (Windows: `Task01\\task01.exe`).
+On Windows, run the corresponding `.exe` file. The source `Task02/complete_code.c` and `Task03/complete_code.c` preserve the supplied starter-program structure with TODO sections completed.
 
 ## Task summaries
-1. Patient-register design repair using nested structures and a pointer-based insertion function.
-2. Courier parcel entities, nested addresses, sorting by weight and receiver-city filtering.
-3. Tagged unions, memory layout, sizeof and safe tag-based printing.
-4. Structure pass-by-value and pointer debugging, address evidence and repair.
-5. Automatic, static, extern and register storage-class comparison.
-6. Canteen inventory, tagged item data, stock validation, expiry warnings and revenue sorting.
+1. Diagnose parallel-array patient data and repair it with nested structures and a pointer-based insertion function.
+2. Model parcels with nested address/date structures; selection-sort by weight and print the supplied sample list.
+3. Compare all-fields structure and tagged union; print active values using the tag and inspect sizes.
+4. Demonstrate pass-by-value versus pointer mutation, address evidence and the arrow operator.
+5. Compare automatic, static, extern-shared and register storage usage.
+6. Model packaged, cooked and combo canteen items; validate stock, warn about expiry and sort revenue.
 
-## Evidence checklist
-- [ ] Record actual GCC version.
-- [ ] Compile and execute every task locally.
-- [ ] Save genuine terminal screenshots in each task folder.
-- [ ] Add input files and measured experiment data where required.
-- [ ] Verify outputs and prepare to explain each design.
+## Submission evidence still to capture
+- [ ] Record actual GCC version and OS/compiler environment.
+- [ ] Compile and execute every program locally; save genuine terminal screenshots in the matching task folders.
+- [ ] Test the boundary cases listed in each task analysis.
+- [ ] Measure `sizeof` on the actual compiler and record timings/copy counts where required.
+- [ ] Add the final report PDF and working repository URL to its cover page.
 
-Execution screenshots and experimental measurements must come from the student's own execution; they are not claimed as completed until captured.
+This repository's sample outputs and design notes are not substitutes for the student's own execution screenshots and experimental measurements. Capture and add those after running the code locally.
